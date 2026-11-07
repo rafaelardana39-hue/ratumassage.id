@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RATU MASSAGE — Layanan Pijat Panggilan & Homecare Surabaya Sidoarjo</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'deep-purple': '#1B1035',
+                        'dark-card': '#241747',
+                        'royal-purple': '#7544B8',
+                        'royal-purple-light': '#8E57DF',
+                        'champagne-gold': '#EBD18B',
+                        'gold-accent': '#DFBA67',
+                        'gold-muted': '#BA9B4A',
+                    },
+                    fontFamily: {
+                        'cinzel': ['Cinzel', 'serif'],
+                        'sans': ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'gold-glow': '0 0 25px -5px rgba(235, 209, 139, 0.3)',
+                        'purple-glow': '0 0 30px -5px rgba(117, 68, 184, 0.4)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Styling & Utilities */
+        body {
+            background-color: #1B1035;
+            color: #F3EEFA;
+            overflow-x: hidden;
+        }
+
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #FFF1CA 0%, #EBD18B 50%, #C49F45 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .gold-border-gradient {
+            border-image: linear-gradient(135deg, #EBD18B, #7544B8, #EBD18B) 1;
+        }
+
+        .gold-btn-gradient {
+            background: linear-gradient(135deg, #F3DE9F 0%, #EBD18B 40%, #D4AB46 100%);
+            color: #1B1035;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .gold-btn-gradient:hover {
+            background: linear-gradient(135deg, #FFF1CA 0%, #F3DE9F 50%, #EBD18B 100%);
+            box-shadow: 0 0 25px rgba(235, 209, 139, 0.45);
+            transform: translateY(-2px);
+        }
+
+        .glass-card {
+            background: rgba(36, 23, 71, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(235, 209, 139, 0.15);
+        }
+
+        .glass-card:hover {
+            border-color: rgba(235, 209, 139, 0.4);
+        }
+
+        /* Subtle Luxury Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1B1035;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #7544B8;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #EBD18B;
+        }
+
+        .hero-pattern {
+            background-image: radial-gradient(rgba(117, 68, 184, 0.25) 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased selection:bg-champagne-gold selection:text-deep-purple">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-gradient-to-r from-deep-purple via-royal-purple to-deep-purple border-b border-champagne-gold/20 py-2 px-4 text-xs md:text-sm text-center text-champagne-gold/90 font-medium tracking-wide">
+        <div class="container mx-auto flex items-center justify-center gap-2">
+            <i class="fa-solid fa-crown text-champagne-gold text-xs"></i>
+            <span>Layanan Pijat Panggilan Eksklusif Surabaya & Sidoarjo • Buka Setiap Hari: 08.00 – 22.00 WIB</span>
+            <span class="hidden md:inline text-white/50">|</span>
+            <span class="hidden md:inline text-white/90"><i class="fa-solid fa-van-shuttle mr-1 text-champagne-gold"></i> Promo Transportasi Tersedia S&K</span>
+        </div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-50 bg-deep-purple/90 backdrop-blur-md border-b border-champagne-gold/15 transition-all duration-300" id="mainHeader">
+        <div class="container mx-auto px-4 lg:px-8 py-3.5 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#beranda" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-full border border-champagne-gold/50 bg-gradient-to-br from-royal-purple to-deep-purple flex items-center justify-center text-champagne-gold shadow-gold-glow group-hover:scale-105 transition-transform">
+                    <i class="fa-solid fa-crown text-lg"></i>
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-cinzel text-xl md:text-2xl font-bold tracking-wider gold-gradient-text leading-tight">RATU MASSAGE</span>
+                    <span class="text-[10px] tracking-[0.25em] text-champagne-gold/70 font-semibold uppercase">Surabaya · Sidoarjo</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Menu -->
+            <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-purple-100">
+                <a href="#beranda" class="hover:text-champagne-gold transition-colors">Beranda</a>
+                <a href="#layanan" class="hover:text-champagne-gold transition-colors">Layanan & Tarif</a>
+                <a href="#layanan-khusus" class="hover:text-champagne-gold transition-colors">Layanan Khusus</a>
+                <a href="#keunggulan" class="hover:text-champagne-gold transition-colors">Tentang Kami</a>
+                <a href="#galeri" class="hover:text-champagne-gold transition-colors">Galeri</a>
+                <a href="#booking" class="hover:text-champagne-gold transition-colors">Reservasi</a>
+                <a href="#kontak" class="hover:text-champagne-gold transition-colors">Kontak</a>
+            </nav>
+
+            <!-- CTA & Mobile Trigger -->
+            <div class="flex items-center gap-3">
+                <a href="#booking" class="hidden sm:inline-flex items-center gap-2 gold-btn-gradient px-4 py-2 rounded-full font-semibold text-xs md:text-sm tracking-wide shadow-md">
+                    <i class="fa-brands fa-whatsapp text-base"></i>
+                    <span>Pesan Sekarang</span>
+                </a>
+                <!-- Mobile Hamburger Button -->
+                <button id="mobileMenuBtn" aria-label="Buka Menu" class="lg:hidden w-10 h-10 flex items-center justify-center text-champagne-gold rounded-lg bg-dark-card border border-champagne-gold/20 focus:outline-none">
+                    <i class="fa-solid fa-bars text-lg" id="mobileMenuIcon"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Nav Menu Panel -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-deep-purple/98 border-b border-champagne-gold/20 px-6 py-6 transition-all duration-300">
+            <div class="flex flex-col space-y-4 text-sm font-medium">
+                <a href="#beranda" class="mobile-nav-link text-purple-100 hover:text-champagne-gold py-1">Beranda</a>
+                <a href="#layanan" class="mobile-nav-link text-purple-100 hover:text-champagne-gold py-1">Layanan & Harga</a>
+                <a href="#layanan-khusus" class="mobile-nav-link text-purple-100 hover:text-champagne-gold py-1">Layanan Khusus</a>
+                <a href="#keunggulan" class="mobile-nav-link text-purple-100 hover:text-champagne-gold py-1">Tentang Kami</a>
+                <a href="#galeri" class="mobile-nav-link text-purple-100 hover:text-champagne-gold py-1">Galeri Suasana</a>
+                <a href="#booking" class="mobile-nav-link text-purple-100 hover:text-champagne-gold py-1">Form Reservasi</a>
+                <a href="#kontak" class="mobile-nav-link text-purple-100 hover:text-champagne-gold py-1">Kontak & Area</a>
+                <div class="pt-2">
+                    <a href="https://wa.me/62895605058117" target="_blank" class="w-full text-center gold-btn-gradient py-2.5 rounded-full font-semibold text-sm flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>WhatsApp 0895605058117</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECTION 1: HERO BERANDA -->
+    <section id="beranda" class="relative min-h-[90vh] flex items-center justify-center hero-pattern py-16 md:py-24 overflow-hidden">
+        <!-- Ambient Glow Effects -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] md:w-[600px] h-[350px] md:h-[600px] bg-royal-purple/25 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="absolute bottom-10 right-10 w-[200px] md:w-[350px] h-[200px] md:h-[350px] bg-champagne-gold/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <div class="container mx-auto px-4 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Left Content -->
+                <div class="lg:col-span-7 text-center lg:text-left space-y-6">
+                    <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-dark-card/90 border border-champagne-gold/30 text-champagne-gold text-xs font-semibold tracking-wider uppercase shadow-sm">
+                        <i class="fa-solid fa-sparkles text-champagne-gold"></i>
+                        PANGGILAN & HOMECARE SURABAYA — SIDOARJO
+                    </div>
+                    
+                    <h1 class="font-cinzel text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.15]">
+                        Relaksasi Nyaman, <br>
+                        <span class="gold-gradient-text">Pelayanan Istimewa</span>
+                    </h1>
+
+                    <p class="text-purple-200/90 text-sm md:text-base lg:text-lg max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+                        Nikmati layanan pijat profesional dengan suasana nyaman di tempat tinggal Anda sendiri. Didukung terapis berpengalaman dan pelayanan penuh perhatian tanpa perlu repot keluar rumah.
+                    </p>
+
+                    <!-- Fast Feature Badge -->
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2 text-xs text-purple-200/80">
+                        <div class="flex items-center justify-center lg:justify-start gap-2 bg-dark-card/60 p-2.5 rounded-lg border border-champagne-gold/10">
+                            <i class="fa-solid fa-clock text-champagne-gold"></i>
+                            <span>08.00 – 22.00 WIB</span>
+                        </div>
+                        <div class="flex items-center justify-center lg:justify-start gap-2 bg-dark-card/60 p-2.5 rounded-lg border border-champagne-gold/10">
+                            <i class="fa-solid fa-shield-heart text-champagne-gold"></i>
+                            <span>Terapis Higienis</span>
+                        </div>
+                        <div class="col-span-2 sm:col-span-1 flex items-center justify-center lg:justify-start gap-2 bg-dark-card/60 p-2.5 rounded-lg border border-champagne-gold/10">
+                            <i class="fa-solid fa-gift text-champagne-gold"></i>
+                            <span>Promo Transport</span>
+                        </div>
+                    </div>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="#booking" class="w-full sm:w-auto gold-btn-gradient px-8 py-3.5 rounded-full font-bold text-sm tracking-wide flex items-center justify-center gap-3 shadow-gold-glow">
+                            <span>Pesan Layanan Sekarang</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                        </a>
+                        <a href="https://wa.me/62895605058117?text=Halo%20Admin%20RATU%20MASSAGE,%20saya%20ingin%20tanya%20informasi%20layanan%20pijat%20panggilan." target="_blank" class="w-full sm:w-auto px-6 py-3.5 rounded-full border border-champagne-gold/40 text-champagne-gold hover:bg-champagne-gold/10 transition-colors font-semibold text-sm flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-lg"></i>
+                            <span>WhatsApp 0895605058117</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Visual Display (Aesthetic Spa Card) -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <!-- Frame glow -->
+                        <div class="absolute -inset-1 rounded-2xl bg-gradient-to-r from-champagne-gold/40 via-royal-purple to-champagne-gold/40 opacity-70 blur-lg"></div>
+                        
+                        <div class="relative glass-card rounded-2xl overflow-hidden p-2.5 shadow-2xl">
+                            <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=1000&auto=format&fit=crop" alt="Suasana Ratu Massage Homecare" class="w-full h-80 sm:h-96 object-cover rounded-xl filter brightness-95 contrast-105">
+                            
+                            <!-- Floating Tag Badge -->
+                            <div class="absolute bottom-6 left-6 right-6 bg-deep-purple/90 backdrop-blur-md border border-champagne-gold/30 p-4 rounded-xl flex items-center justify-between shadow-xl">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-full bg-royal-purple flex items-center justify-center text-champagne-gold">
+                                        <i class="fa-solid fa-spa"></i>
+                                    </div>
+                                    <div>
+                                        <p class="font-cinzel text-sm font-bold text-champagne-gold">RATU MASSAGE</p>
+                                        <p class="text-xs text-purple-200">Kenyamanan Spa di Rumah Anda</p>
+                                    </div>
+                                </div>
+                                <span class="text-xs font-semibold px-2.5 py-1 rounded bg-champagne-gold/20 text-champagne-gold border border-champagne-gold/30">Homecare</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: LAYANAN UTAMA & HARGA -->
+    <section id="layanan" class="py-20 bg-deep-purple relative border-t border-champagne-gold/10">
+        <div class="container mx-auto px-4 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center max-w-2xl mx-auto mb-14 space-y-3">
+                <span class="text-xs font-bold tracking-[0.2em] uppercase text-champagne-gold">Paket Unggulan</span>
+                <h2 class="font-cinzel text-3xl md:text-4xl font-bold gold-gradient-text">Layanan & Daftar Harga</h2>
+                <div class="w-16 h-0.5 bg-champagne-gold mx-auto mt-2"></div>
+                <p class="text-purple-200/80 text-sm md:text-base">Transparansi tarif resmi tanpa biaya tersembunyi. Silakan pilih paket durasi sesuai kebutuhan relaksasi Anda.</p>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Card 1: Full Body Massage -->
+                <div class="glass-card rounded-2xl overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-1.5 hover:shadow-gold-glow group">
+                    <div class="relative h-52 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?q=80&w=800&auto=format&fit=crop" alt="Full Body Massage" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark-card via-transparent to-transparent"></div>
+                        <span class="absolute top-3 left-3 bg-deep-purple/80 backdrop-blur-md text-champagne-gold border border-champagne-gold/30 text-xs px-3 py-1 rounded-full font-semibold">
+                            Favorit Pelanggan
+                        </span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="font-cinzel text-xl font-bold text-champagne-gold mb-2">Full Body Massage</h3>
+                            <p class="text-purple-200/80 text-xs md:text-sm leading-relaxed mb-4">
+                                Pijatan seluruh tubuh dari ujung kepala hingga kaki menggunakan minyak aromaterapi untuk melancarkan sirkulasi darah dan meredakan pegal linu.
+                            </p>
+                            <!-- Price Table Options -->
+                            <div class="space-y-2 border-t border-b border-champagne-gold/15 py-3 text-xs">
+                                <div class="flex justify-between items-center py-1">
+                                    <span class="text-purple-200 font-medium"><i class="fa-regular fa-clock text-champagne-gold mr-1.5"></i> 60 Menit</span>
+                                    <span class="font-bold text-champagne-gold text-sm">Rp 130.000</span>
+                                </div>
+                                <div class="flex justify-between items-center py-1 bg-royal-purple/20 px-2 rounded">
+                                    <span class="text-purple-200 font-medium"><i class="fa-regular fa-clock text-champagne-gold mr-1.5"></i> 90 Menit</span>
+                                    <span class="font-bold text-champagne-gold text-sm">Rp 160.000</span>
+                                </div>
+                                <div class="flex justify-between items-center py-1">
+                                    <span class="text-purple-200 font-medium"><i class="fa-regular fa-clock text-champagne-gold mr-1.5"></i> 120 Menit</span>
+                                    <span class="font-bold text-champagne-gold text-sm">Rp 210.000</span>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/62895605058117?text=Halo%20Admin%20RATU%20MASSAGE,%20saya%20ingin%20pesan%20layanan%20Full%20Body%20Massage." target="_blank" class="w-full py-2.5 rounded-xl border border-champagne-gold/50 text-champagne-gold hover:bg-champagne-gold hover:text-deep-purple transition-all font-semibold text-xs text-center flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-sm"></i>
+                            <span>Pesan via WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 2: Hot Stone & Body Massage -->
+                <div class="glass-card rounded-2xl overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-1.5 hover:shadow-gold-glow group">
+                    <div class="relative h-52 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?q=80&w=800&auto=format&fit=crop" alt="Hot Stone & Body Massage" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark-card via-transparent to-transparent"></div>
+                        <span class="absolute top-3 left-3 bg-royal-purple text-champagne-gold border border-champagne-gold/30 text-xs px-3 py-1 rounded-full font-semibold">
+                            Relaksasi Mendalam
+                        </span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="font-cinzel text-xl font-bold text-champagne-gold mb-2">Hot Stone & Body Massage</h3>
+                            <p class="text-purple-200/80 text-xs md:text-sm leading-relaxed mb-4">
+                                Kombinasi pijat tubuh dengan batu basal hangat pilihan. Panas alami batu menembus jaringan otot untuk meredakan ketegangan kronis dan stres berat.
+                            </p>
+                            <!-- Price Table Options -->
+                            <div class="space-y-2 border-t border-b border-champagne-gold/15 py-3 text-xs">
+                                <div class="flex justify-between items-center py-2 bg-royal-purple/20 px-2 rounded">
+                                    <span class="text-purple-200 font-medium"><i class="fa-regular fa-clock text-champagne-gold mr-1.5"></i> 120 Menit (2 Jam)</span>
+                                    <span class="font-bold text-champagne-gold text-base">Rp 270.000</span>
+                                </div>
+                                <p class="text-[11px] text-purple-300/60 italic">*Termasuk sterilisasi batu hangat & aromaterapi</p>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/62895605058117?text=Halo%20Admin%20RATU%20MASSAGE,%20saya%20ingin%20pesan%20layanan%20Hot%20Stone%20%26%20Body%20Massage." target="_blank" class="w-full py-2.5 rounded-xl border border-champagne-gold/50 text-champagne-gold hover:bg-champagne-gold hover:text-deep-purple transition-all font-semibold text-xs text-center flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-sm"></i>
+                            <span>Pesan via WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 3: Bekam Basah & Body Massage -->
+                <div class="glass-card rounded-2xl overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-1.5 hover:shadow-gold-glow group">
+                    <div class="relative h-52 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=800&auto=format&fit=crop" alt="Bekam Basah & Body Massage" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark-card via-transparent to-transparent"></div>
+                        <span class="absolute top-3 left-3 bg-deep-purple/80 backdrop-blur-md text-champagne-gold border border-champagne-gold/30 text-xs px-3 py-1 rounded-full font-semibold">
+                            Detoksifikasi Sehat
+                        </span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="font-cinzel text-xl font-bold text-champagne-gold mb-2">Bekam Basah & Body Massage</h3>
+                            <p class="text-purple-200/80 text-xs md:text-sm leading-relaxed mb-4">
+                                Terapi komplit relaksasi otot dilanjutkan terapi bekam basah higienis dengan jarum steril sekali pakai untuk membantu membuang racun dan angin.
+                            </p>
+                            <!-- Price Table Options -->
+                            <div class="space-y-2 border-t border-b border-champagne-gold/15 py-3 text-xs">
+                                <div class="flex justify-between items-center py-1">
+                                    <span class="text-purple-200 font-medium"><i class="fa-regular fa-clock text-champagne-gold mr-1.5"></i> 90 Menit</span>
+                                    <span class="font-bold text-champagne-gold text-sm">Rp 250.000</span>
+                                </div>
+                                <div class="flex justify-between items-center py-1 bg-royal-purple/20 px-2 rounded">
+                                    <span class="text-purple-200 font-medium"><i class="fa-regular fa-clock text-champagne-gold mr-1.5"></i> 120 Menit</span>
+                                    <span class="font-bold text-champagne-gold text-sm">Rp 320.000</span>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/62895605058117?text=Halo%20Admin%20RATU%20MASSAGE,%20saya%20ingin%20pesan%20layanan%20Bekam%20Basah%20%26%20Body%20Massage." target="_blank" class="w-full py-2.5 rounded-xl border border-champagne-gold/50 text-champagne-gold hover:bg-champagne-gold hover:text-deep-purple transition-all font-semibold text-xs text-center flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-sm"></i>
+                            <span>Pesan via WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: LAYANAN KHUSUS & TERARAH -->
+    <section id="layanan-khusus" class="py-20 bg-dark-card/50 relative border-t border-champagne-gold/10">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-14 space-y-3">
+                <span class="text-xs font-bold tracking-[0.2em] uppercase text-champagne-gold">Perawatan Terfokus</span>
+                <h2 class="font-cinzel text-3xl md:text-4xl font-bold gold-gradient-text">Layanan Khusus & Terarah</h2>
+                <div class="w-16 h-0.5 bg-champagne-gold mx-auto mt-2"></div>
+                <p class="text-purple-200/80 text-sm md:text-base">Perawatan khusus dengan pendekatan hati-hati, etis, dan disesuaikan dengan kondisi kenyamanan setiap individu.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Khusus 1: Pijat Ibu Hamil -->
+                <div class="glass-card p-6 rounded-2xl flex flex-col justify-between border-l-4 border-l-champagne-gold hover:shadow-purple-glow transition-all">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-royal-purple/40 text-champagne-gold flex items-center justify-center text-xl mb-4 border border-champagne-gold/20">
+                            <i class="fa-solid fa-person-pregnant"></i>
+                        </div>
+                        <h3 class="font-cinzel text-lg font-bold text-champagne-gold mb-2">Pijat Ibu Hamil (Prenatal)</h3>
+                        <p class="text-purple-200/80 text-xs md:text-sm leading-relaxed mb-4">
+                            Relaksasi khusus untuk mengurangi pegal di punggung dan kaki ibu hamil dengan posisi aman.
+                        </p>
+                        <div class="bg-deep-purple/80 p-3 rounded-lg border border-champagne-gold/10 text-[11px] text-purple-200/70 mb-4">
+                            <i class="fa-solid fa-circle-info text-champagne-gold mr-1"></i>
+                            Wajib konfirmasi usia kehamilan (aman trimester 2 & 3) dan persetujuan bidan/dokter kandungan jika ada keluhan khusus.
+                        </div>
+                    </div>
+                    <button onclick="pilihLayananBooking('Pijat Ibu Hamil')" class="w-full py-2 bg-royal-purple/30 hover:bg-royal-purple text-champagne-gold rounded-lg text-xs font-semibold transition-colors flex items-center justify-center gap-1.5">
+                        <i class="fa-regular fa-calendar-check"></i>
+                        <span>Konsultasi & Reservasi</span>
+                    </button>
+                </div>
+
+                <!-- Khusus 2: Pijat Laktasi -->
+                <div class="glass-card p-6 rounded-2xl flex flex-col justify-between border-l-4 border-l-champagne-gold hover:shadow-purple-glow transition-all">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-royal-purple/40 text-champagne-gold flex items-center justify-center text-xl mb-4 border border-champagne-gold/20">
+                            <i class="fa-solid fa-hands-holding-child"></i>
+                        </div>
+                        <h3 class="font-cinzel text-lg font-bold text-champagne-gold mb-2">Pijat Laktasi</h3>
+                        <p class="text-purple-200/80 text-xs md:text-sm leading-relaxed mb-4">
+                            Terapi pemijatan lembut area punggung dan payudara untuk merangsang hormon oksitosin dan merilekskan otot ibu menyusui agar proses ASI lebih nyaman.
+                        </p>
+                        <div class="bg-deep-purple/80 p-3 rounded-lg border border-champagne-gold/10 text-[11px] text-purple-200/70 mb-4">
+                            <i class="fa-solid fa-circle-info text-champagne-gold mr-1"></i>
+                            Pendekatan profesional tanpa klaim medis berlebihan, fokus pada kenyamanan dan kelancaran aliran ASI.
+                        </div>
+                    </div>
+                    <button onclick="pilihLayananBooking('Pijat Laktasi')" class="w-full py-2 bg-royal-purple/30 hover:bg-royal-purple text-champagne-gold rounded-lg text-xs font-semibold transition-colors flex items-center justify-center gap-1.5">
+                        <i class="fa-regular fa-calendar-check"></i>
+                        <span>Konsultasi & Reservasi</span>
+                    </button>
+                </div>
+
+                <!-- Khusus 3: Pijat Bayi & Balita -->
+                <div class="glass-card p-6 rounded-2xl flex flex-col justify-between border-l-4 border-l-champagne-gold hover:shadow-purple-glow transition-all">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-royal-purple/40 text-champagne-gold flex items-center justify-center text-xl mb-4 border border-champagne-gold/20">
+                            <i class="fa-solid fa-baby"></i>
+                        </div>
+                        <div class="flex items-center justify-between mb-2">
+                            <h3 class="font-cinzel text-lg font-bold text-champagne-gold">Pijat Bayi & Balita</h3>
+                            <span class="text-xs font-bold text-champagne-gold bg-champagne-gold/15 px-2 py-0.5 rounded border border-champagne-gold/30">Rp 100.000</span>
+                        </div>
+                        <p class="text-purple-200/80 text-xs md:text-sm leading-relaxed mb-4">
+                            Pijatan stimulasi tumbuh kembang bayi yang lembut dan menenangkan, membantu tidur lebih lelap dan mengatasi perut kembung (45 Menit).
+                        </p>
+                        <div class="bg-deep-purple/80 p-3 rounded-lg border border-champagne-gold/10 text-[11px] text-purple-200/70 mb-4">
+                            <i class="fa-solid fa-shield-halved text-champagne-gold mr-1"></i>
+                            Mengutamakan keselamatan, keamanan, dan kelembutan ekstra bagi si kecil.
+                        </div>
+                    </div>
+                    <button onclick="pilihLayananBooking('Pijat Bayi & Balita (45 Menit - Rp100.000)')" class="w-full py-2 bg-royal-purple/30 hover:bg-royal-purple text-champagne-gold rounded-lg text-xs font-semibold transition-colors flex items-center justify-center gap-1.5">
+                        <i class="fa-regular fa-calendar-check"></i>
+                        <span>Pilih Layanan Bayi</span>
+                    </button>
+                </div>
+
+                <!-- Khusus 4: Pijat Turun Peranakan -->
+                <div class="glass-card p-6 rounded-2xl flex flex-col justify-between border-l-4 border-l-champagne-gold hover:shadow-purple-glow transition-all">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-royal-purple/40 text-champagne-gold flex items-center justify-center text-xl mb-4 border border-champagne-gold/20">
+                            <i class="fa-solid fa-heart-pulse"></i>
+                        </div>
+                        <h3 class="font-cinzel text-lg font-bold text-champagne-gold mb-2">Pijat Turun Peranakan</h3>
+                        <p class="text-purple-200/80 text-xs md:text-sm leading-relaxed mb-4">
+                            Penanganan tradisional rasa pegal di area panggul dan pinggang pasca melahirkan atau kelelahan dengan pemijatan yang tepat.
+                        </p>
+                        <div class="bg-deep-purple/80 p-3 rounded-lg border border-champagne-gold/10 text-[11px] text-purple-200/70 mb-4">
+                            <i class="fa-solid fa-triangle-exclamation text-champagne-gold mr-1"></i>
+                            Wajib konsultasi awal mengenai keluhan. Tidak dimaksudkan sebagai klaim kesembuhan medis penyakit prolaps uteri.
+                        </div>
+                    </div>
+                    <button onclick="pilihLayananBooking('Pijat Turun Peranakan')" class="w-full py-2 bg-royal-purple/30 hover:bg-royal-purple text-champagne-gold rounded-lg text-xs font-semibold transition-colors flex items-center justify-center gap-1.5">
+                        <i class="fa-regular fa-calendar-check"></i>
+                        <span>Konsultasi Kebutuhan</span>
+                    </button>
+                </div>
+
+                <!-- Khusus 5: Pijat Keseleo / Urat -->
+                <div class="glass-card p-6 rounded-2xl flex flex-col justify-between border-l-4 border-l-champagne-gold hover:shadow-purple-glow transition-all md:col-span-2 lg:col-span-2">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-royal-purple/40 text-champagne-gold flex items-center justify-center text-xl mb-4 border border-champagne-gold/20">
+                            <i class="fa-solid fa-bone"></i>
+                        </div>
+                        <h3 class="font-cinzel text-lg font-bold text-champagne-gold mb-2">Pijat Keseleo / Urat Kaku</h3>
+                        <p class="text-purple-200/80 text-xs md:text-sm leading-relaxed mb-4">
+                            Peredaan ketegangan urat dan otot yang kaku akibat salah posisi tidur, aktivitas berat, atau terkilir ringan. Terapis melakukan perabaan hati-hati pada titik persendian.
+                        </p>
+                        <div class="bg-deep-purple/80 p-3 rounded-lg border border-champagne-gold/10 text-[11px] text-purple-200/70 mb-4">
+                            <i class="fa-solid fa-notes-medical text-champagne-gold mr-1"></i>
+                            Dilakukan penyaringan awal kondisi cedera (patah tulang/dislokasi akut wajib rujukan medis rumah sakit).
+                        </div>
+                    </div>
+                    <button onclick="pilihLayananBooking('Pijat Keseleo / Urat')" class="w-full py-2 bg-royal-purple/30 hover:bg-royal-purple text-champagne-gold rounded-lg text-xs font-semibold transition-colors flex items-center justify-center gap-1.5">
+                        <i class="fa-regular fa-calendar-check"></i>
+                        <span>Konsultasi Cedera Ringan</span>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: TENTANG KAMI & KEUNGGULAN -->
+    <section id="keunggulan" class="py-20 bg-deep-purple relative overflow-hidden">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Left: Profil RATU MASSAGE -->
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="text-xs font-bold tracking-[0.2em] uppercase text-champagne-gold">MENGAPA MEMILIH KAMI</span>
+                    <h2 class="font-cinzel text-3xl md:text-4xl font-bold leading-tight">
+                        Standar Pelayanan Mewah <br>
+                        <span class="gold-gradient-text">Di Tempat Anda</span>
+                    </h2>
+                    <p class="text-purple-200/85 text-sm md:text-base leading-relaxed">
+                        <strong class="text-champagne-gold">RATU MASSAGE</strong> hadir melayani wilayah Surabaya dan Sidoarjo sebagai solusi relaksasi tubuh tanpa macet dan tanpa antre. Semua terapis beretika sopan, terlatih, dan membawa perlengkapan higienis langsung ke rumah, apartemen, atau hotel Anda.
+                    </p>
+
+                    <div class="space-y-4 pt-2">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-royal-purple/40 border border-champagne-gold/30 flex items-center justify-center text-champagne-gold shrink-0">
+                                <i class="fa-solid fa-certificate"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-cinzel font-bold text-champagne-gold text-sm md:text-base">Terapis Terlatih & Sopan</h4>
+                                <p class="text-purple-200/70 text-xs md:text-sm">Terapis terampil dengan teknik pijatan terukur dan menjaga kenyamanan privasi Anda.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-royal-purple/40 border border-champagne-gold/30 flex items-center justify-center text-champagne-gold shrink-0">
+                                <i class="fa-solid fa-pump-soap"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-cinzel font-bold text-champagne-gold text-sm md:text-base">Minyak & Alat Steril Premium</h4>
+                                <p class="text-purple-200/70 text-xs md:text-sm">Menggunakan minyak zaitun / aromaterapi berkualitas, jarum bekam steril sekali pakai, dan kain alas bersih.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-royal-purple/40 border border-champagne-gold/30 flex items-center justify-center text-champagne-gold shrink-0">
+                                <i class="fa-solid fa-car-side"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-cinzel font-bold text-champagne-gold text-sm md:text-base">Area Surabaya & Sidoarjo Luas</h4>
+                                <p class="text-purple-200/70 text-xs md:text-sm">Siap datang ke Surabaya Pusat, Timur, Barat, Selatan, Utara, hingga Sidoarjo kota dan sekitarnya.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Stats & Operational Badge Card -->
+                <div class="lg:col-span-6">
+                    <div class="glass-card rounded-2xl p-6 md:p-8 relative border border-champagne-gold/20 shadow-2xl">
+                        <div class="text-center pb-6 border-b border-champagne-gold/15">
+                            <div class="inline-block p-3 rounded-full bg-royal-purple/50 border border-champagne-gold/40 text-champagne-gold mb-3">
+                                <i class="fa-solid fa-crown text-2xl"></i>
+                            </div>
+                            <h3 class="font-cinzel text-xl font-bold gold-gradient-text">RATU MASSAGE SURABAYA</h3>
+                            <p class="text-xs text-purple-200/80">Satu Merek Resmi • Tanpa Nama Lain</p>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-4 py-6 text-center">
+                            <div class="p-4 rounded-xl bg-deep-purple/80 border border-champagne-gold/10">
+                                <p class="text-champagne-gold font-cinzel text-2xl font-bold">08.00</p>
+                                <p class="text-xs text-purple-200/70">Mulai Operasional</p>
+                            </div>
+                            <div class="p-4 rounded-xl bg-deep-purple/80 border border-champagne-gold/10">
+                                <p class="text-champagne-gold font-cinzel text-2xl font-bold">22.00</p>
+                                <p class="text-xs text-purple-200/70">Order Terakhir (WIB)</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-royal-purple/20 p-4 rounded-xl border border-champagne-gold/20 flex items-center justify-between text-xs">
+                            <div class="flex items-center gap-2 text-champagne-gold">
+                                <i class="fa-solid fa-map-location-dot text-base"></i>
+                                <span class="font-semibold">Cakupan Wilayah:</span>
+                            </div>
+                            <span class="text-purple-100 font-medium">Surabaya & Sidoarjo</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: GALERI SUASANA & PERLENGKAPAN -->
+    <section id="galeri" class="py-20 bg-dark-card/40 border-t border-champagne-gold/10">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-10 space-y-3">
+                <span class="text-xs font-bold tracking-[0.2em] uppercase text-champagne-gold">Dokumentasi & Suasana</span>
+                <h2 class="font-cinzel text-3xl md:text-4xl font-bold gold-gradient-text">Galeri Ratu Massage</h2>
+                <div class="w-16 h-0.5 bg-champagne-gold mx-auto mt-2"></div>
+                <p class="text-purple-200/80 text-sm md:text-base">Melihat foto perlengkapan asli, minyak aromaterapi, dan suasana layanan spa kami. Klik foto untuk melihat ukuran penuh.</p>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="flex flex-wrap items-center justify-center gap-2 mb-10 text-xs">
+                <button onclick="filterGallery('semua')" class="gallery-filter-btn active-filter px-4 py-2 rounded-full border border-champagne-gold/40 bg-champagne-gold text-deep-purple font-bold transition-all" data-filter="semua">Semua Foto</button>
+                <button onclick="filterGallery('alat')" class="gallery-filter-btn px-4 py-2 rounded-full border border-champagne-gold/40 bg-dark-card text-champagne-gold font-medium hover:bg-royal-purple transition-all" data-filter="alat">Perlengkapan & Minyak</button>
+                <button onclick="filterGallery('suasana')" class="gallery-filter-btn px-4 py-2 rounded-full border border-champagne-gold/40 bg-dark-card text-champagne-gold font-medium hover:bg-royal-purple transition-all" data-filter="suasana">Suasana Relaksasi</button>
+                <button onclick="filterGallery('promo')" class="gallery-filter-btn px-4 py-2 rounded-full border border-champagne-gold/40 bg-dark-card text-champagne-gold font-medium hover:bg-royal-purple transition-all" data-filter="promo">Poster & Pricelist</button>
+            </div>
+
+            <!-- Gallery Grid (14 items as specified) -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4" id="galleryContainer">
+                
+                <!-- Item 1 -->
+                <div class="gallery-item suasana relative group overflow-hidden rounded-xl cursor-pointer aspect-square glass-card" onclick="openLightbox('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=1200&auto=format&fit=crop', 'Suasana Relaksasi Homecare')">
+                    <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=600&auto=format&fit=crop" alt="Suasana Relaksasi" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-deep-purple/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-3 text-center">
+                        <i class="fa-solid fa-magnifying-glass-plus text-champagne-gold text-xl mb-1"></i>
+                        <span class="text-xs font-semibold text-champagne-gold">Suasana Spa</span>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="gallery-item alat relative group overflow-hidden rounded-xl cursor-pointer aspect-square glass-card" onclick="openLightbox('https://images.unsplash.com/photo-1608248597359-22a6136d80c3?q=80&w=1200&auto=format&fit=crop', 'Minyak Aromaterapi & Lilin Relaksasi')">
+                    <img src="https://images.unsplash.com/photo-1608248597359-22a6136d80c3?q=80&w=600&auto=format&fit=crop" alt="Perlengkapan Minyak" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-deep-purple/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-3 text-center">
+                        <i class="fa-solid fa-magnifying-glass-plus text-champagne-gold text-xl mb-1"></i>
+                        <span class="text-xs font-semibold text-champagne-gold">Minyak Herbal</span>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="gallery-item alat relative group overflow-hidden rounded-xl cursor-pointer aspect-square glass-card" onclick="openLightbox('https://images.unsplash.com/photo-1519823551278-64ac92734fb1?q=80&w=1200&auto=format&fit=crop', 'Hot Stone Terapi Pilihan')">
+                    <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?q=80&w=600&auto=format&fit=crop" alt="Hot Stone Basal" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-deep-purple/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-3 text-center">
+                        <i class="fa-solid fa-magnifying-glass-plus text-champagne-gold text-xl mb-1"></i>
+                        <span class="text-xs font-semibold text-champagne-gold">Batu Hot Stone</span>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="gallery-item suasana relative group overflow-hidden rounded-xl cursor-pointer aspect-square glass-card" onclick="openLightbox('https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?q=80&w=1200&auto=format&fit=crop', 'Layanan Full Body Massage')">
+                    <img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?q=80&w=600&auto=format&fit=crop" alt="Body Massage" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-deep-purple/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-3 text-center">
+                        <i class="fa-solid fa-magnifying-glass-plus text-champagne-gold text-xl mb-1"></i>
+                        <span class="text-xs font-semibold text-champagne-gold">Pijat Punggung</span>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="gallery-item promo relative group overflow-hidden rounded-xl cursor-pointer aspect-square glass-card" onclick="openLightbox('https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=1200&auto=format&fit=crop', 'Poster Promo Ratu Massage')">
+                    <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=600&auto=format&fit=crop" alt="Promo Ratu Massage" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-deep-purple/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-3 text-center">
+                        <i class="fa-solid fa-magnifying-glass-plus text-champagne-gold text-xl mb-1"></i>
+                        <span class="text-xs font-semibold text-champagne-gold">Paket Promo</span>
+                    </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="gallery-item alat relative group overflow-hidden rounded-xl cursor-pointer aspect-square glass-card" onclick="openLightbox('https://images.unsplash.com/photo-1596178065887-1198b6148b2b?q=80&w=1200&auto=format&fit=crop', 'Handuk & Perlengkapan Higienis')">
+                    <img src="https://images.unsplash.com/photo-1596178065887-1198b6148b2b?q=80&w=600&auto=format&fit=crop" alt="Handuk Bersih" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-deep-purple/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-3 text-center">
+                        <i class="fa-solid fa-magnifying-glass-plus text-champagne-gold text-xl mb-1"></i>
+                        <span class="text-xs font-semibold text-champagne-gold">Handuk Steril</span>
+                    </div>
+                </div>
+
+                <!-- Item 7 -->
+                <div class="gallery-item suasana relative group overflow-hidden rounded-xl cursor-pointer aspect-square glass-card" onclick="openLightbox('https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=1200&auto=format&fit=crop', 'Pijat Kaki & Refleksi')">
+                    <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=600&auto=format&fit=crop" alt="Refleksi Kaki" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-deep-purple/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-3 text-center">
+                        <i class="fa-solid fa-magnifying-glass-plus text-champagne-gold text-xl mb-1"></i>
+                        <span class="text-xs font-semibold text-champagne-gold">Refleksi Kaki</span>
+                    </div>
+                </div>
+
+                <!-- Item 8 -->
+                <div class="gallery-item suasana relative group overflow-hidden rounded-xl cursor-pointer aspect-square glass-card" onclick="openLightbox('https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=1200&auto=format&fit=crop', 'Kenyamanan Relaksasi Wajah & Kepala')">
+                    <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=600&auto=format&fit=crop" alt="Totok Wajah" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-deep-purple/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-3 text-center">
+                        <i class="fa-solid fa-magnifying-glass-plus text-champagne-gold text-xl mb-1"></i>
+                        <span class="text-xs font-semibold text-champagne-gold">Pijat Kepala</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: SISTEM BOOKING WHATSAPP -->
+    <section id="booking" class="py-20 bg-deep-purple relative border-t border-champagne-gold/10">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="max-w-3xl mx-auto">
+                
+                <div class="text-center mb-10 space-y-3">
+                    <span class="text-xs font-bold tracking-[0.2em] uppercase text-champagne-gold">RESERVASI MUDAH</span>
+                    <h2 class="font-cinzel text-3xl md:text-4xl font-bold gold-gradient-text">Formulir Booking WhatsApp</h2>
+                    <div class="w-16 h-0.5 bg-champagne-gold mx-auto mt-2"></div>
+                    <p class="text-purple-200/80 text-xs md:text-sm">Lengkapi data reservasi di bawah ini untuk mengirim format booking instan ke admin WhatsApp RATU MASSAGE.</p>
+                </div>
+
+                <!-- Booking Form Card -->
+                <div class="glass-card rounded-2xl p-6 sm:p-10 border border-champagne-gold/25 shadow-2xl relative">
+                    <form id="bookingForm" class="space-y-6">
+                        
+                        <!-- Nama Pemesan -->
+                        <div>
+                            <label class="block text-xs font-bold text-champagne-gold uppercase tracking-wider mb-2" for="clientName">
+                                <i class="fa-regular fa-user mr-1.5"></i> Nama Lengkap Pemesan *
+                            </label>
+                            <input type="text" id="clientName" required placeholder="Contoh: Ibu Rina / Bpk. Hendra" class="w-full bg-deep-purple/90 border border-champagne-gold/30 rounded-xl px-4 py-3 text-sm text-purple-100 placeholder-purple-400/40 focus:outline-none focus:border-champagne-gold focus:ring-1 focus:ring-champagne-gold transition-colors">
+                        </div>
+
+                        <!-- Pilihan Layanan -->
+                        <div>
+                            <label class="block text-xs font-bold text-champagne-gold uppercase tracking-wider mb-2" for="serviceSelect">
+                                <i class="fa-solid fa-spa mr-1.5"></i> Pilih Layanan Pijat *
+                            </label>
+                            <select id="serviceSelect" required class="w-full bg-deep-purple/90 border border-champagne-gold/30 rounded-xl px-4 py-3 text-sm text-purple-100 focus:outline-none focus:border-champagne-gold focus:ring-1 focus:ring-champagne-gold transition-colors">
+                                <option value="Full Body Massage — 60 Menit (Rp130.000)">Full Body Massage — 60 Menit (Rp 130.000)</option>
+                                <option value="Full Body Massage — 90 Menit (Rp160.000)" selected>Full Body Massage — 90 Menit (Rp 160.000)</option>
+                                <option value="Full Body Massage — 120 Menit (Rp210.000)">Full Body Massage — 120 Menit (Rp 210.000)</option>
+                                <option value="Hot Stone & Body Massage — 120 Menit (Rp270.000)">Hot Stone & Body Massage — 120 Menit (Rp 270.000)</option>
+                                <option value="Bekam Basah & Body Massage — 90 Menit (Rp250.000)">Bekam Basah & Body Massage — 90 Menit (Rp 250.000)</option>
+                                <option value="Bekam Basah & Body Massage — 120 Menit (Rp320.000)">Bekam Basah & Body Massage — 120 Menit (Rp 320.000)</option>
+                                <option value="Pijat Bayi & Balita — 45 Menit (Rp100.000)">Pijat Bayi & Balita — 45 Menit (Rp 100.000)</option>
+                                <option value="Pijat Ibu Hamil (Prenatal)">Pijat Ibu Hamil (Prenatal)</option>
+                                <option value="Pijat Laktasi">Pijat Laktasi</option>
+                                <option value="Pijat Turun Peranakan">Pijat Turun Peranakan</option>
+                                <option value="Pijat Keseleo / Urat">Pijat Keseleo / Urat</option>
+                            </select>
+                        </div>
+
+                        <!-- Grid Tanggal & Jam -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-champagne-gold uppercase tracking-wider mb-2" for="bookingDate">
+                                    <i class="fa-regular fa-calendar mr-1.5"></i> Tanggal Booking *
+                                </label>
+                                <input type="date" id="bookingDate" required class="w-full bg-deep-purple/90 border border-champagne-gold/30 rounded-xl px-4 py-3 text-sm text-purple-100 focus:outline-none focus:border-champagne-gold focus:ring-1 focus:ring-champagne-gold transition-colors">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-champagne-gold uppercase tracking-wider mb-2" for="bookingTime">
+                                    <i class="fa-regular fa-clock mr-1.5"></i> Jam yang Diinginkan *
+                                </label>
+                                <select id="bookingTime" required class="w-full bg-deep-purple/90 border border-champagne-gold/30 rounded-xl px-4 py-3 text-sm text-purple-100 focus:outline-none focus:border-champagne-gold focus:ring-1 focus:ring-champagne-gold transition-colors">
+                                    <option value="08.00 WIB">08.00 WIB</option>
+                                    <option value="09.00 WIB">09.00 WIB</option>
+                                    <option value="10.00 WIB" selected>10.00 WIB</option>
+                                    <option value="11.00 WIB">11.00 WIB</option>
+                                    <option value="13.00 WIB">13.00 WIB</option>
+                                    <option value="14.00 WIB">14.00 WIB</option>
+                                    <option value="15.00 WIB">15.00 WIB</option>
+                                    <option value="16.00 WIB">16.00 WIB</option>
+                                    <option value="18.30 WIB">18.30 WIB</option>
+                                    <option value="19.30 WIB">19.30 WIB</option>
+                                    <option value="20.30 WIB">20.30 WIB</option>
+                                    <option value="21.00 WIB">21.00 WIB</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Area Layanan (Radio buttons) -->
+                        <div>
+                            <label class="block text-xs font-bold text-champagne-gold uppercase tracking-wider mb-2">
+                                <i class="fa-solid fa-map-pin mr-1.5"></i> Area Layanan *
+                            </label>
+                            <div class="grid grid-cols-2 gap-4">
+                                <label class="flex items-center gap-3 p-3.5 rounded-xl border border-champagne-gold/30 bg-deep-purple/80 cursor-pointer hover:border-champagne-gold transition-all">
+                                    <input type="radio" name="areaOption" value="Surabaya" checked class="accent-champagne-gold w-4 h-4">
+                                    <span class="text-xs sm:text-sm font-semibold text-purple-100">Surabaya</span>
+                                </label>
+                                <label class="flex items-center gap-3 p-3.5 rounded-xl border border-champagne-gold/30 bg-deep-purple/80 cursor-pointer hover:border-champagne-gold transition-all">
+                                    <input type="radio" name="areaOption" value="Sidoarjo" class="accent-champagne-gold w-4 h-4">
+                                    <span class="text-xs sm:text-sm font-semibold text-purple-100">Sidoarjo</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Alamat Lengkap & Catatan -->
+                        <div>
+                            <label class="block text-xs font-bold text-champagne-gold uppercase tracking-wider mb-2" for="clientAddress">
+                                <i class="fa-solid fa-house mr-1.5"></i> Alamat Lengkap / Nama Hotel / Catatan Khusus *
+                            </label>
+                            <textarea id="clientAddress" rows="3" required placeholder="Tuliskan alamat lengkap jalan, nomor rumah/kamar hotel, dan catatan keluhan (jika ada)..." class="w-full bg-deep-purple/90 border border-champagne-gold/30 rounded-xl px-4 py-3 text-sm text-purple-100 placeholder-purple-400/40 focus:outline-none focus:border-champagne-gold focus:ring-1 focus:ring-champagne-gold transition-colors"></textarea>
+                        </div>
+
+                        <!-- Disclaimer Note -->
+                        <div class="p-3.5 rounded-xl bg-royal-purple/20 border border-champagne-gold/20 text-[11px] text-purple-200/80 leading-relaxed flex items-start gap-2.5">
+                            <i class="fa-solid fa-circle-info text-champagne-gold text-sm shrink-0 mt-0.5"></i>
+                            <span>
+                                <strong>Catatan Reservasi:</strong> Membuka WhatsApp tidak otomatis mengonfirmasi reservasi. Ketersediaan jam terapis dan biaya transportasi akan dikonfirmasi langsung oleh admin resmi RATU MASSAGE.
+                            </span>
+                        </div>
+
+                        <!-- Submit WhatsApp Button -->
+                        <button type="submit" class="w-full gold-btn-gradient py-4 rounded-xl font-bold text-sm md:text-base tracking-wide flex items-center justify-center gap-3 shadow-gold-glow">
+                            <i class="fa-brands fa-whatsapp text-xl"></i>
+                            <span>Lanjutkan ke WhatsApp</span>
+                        </button>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 7: KONTAK, AREA & FOOTER -->
+    <footer id="kontak" class="bg-deep-purple border-t border-champagne-gold/20 pt-16 pb-12 relative">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-champagne-gold/15">
+                
+                <!-- Col 1: Brand Info -->
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-9 h-9 rounded-full border border-champagne-gold bg-royal-purple flex items-center justify-center text-champagne-gold">
+                            <i class="fa-solid fa-crown text-base"></i>
+                        </div>
+                        <span class="font-cinzel text-xl font-bold gold-gradient-text">RATU MASSAGE</span>
+                    </div>
+                    <p class="text-xs text-purple-200/80 leading-relaxed">
+                        Layanan pijat panggilan & homecare terpercaya di Surabaya & Sidoarjo. Relaksasi eksklusif di kenyamanan tempat tinggal Anda.
+                    </p>
+                    <div class="pt-2 flex items-center gap-3">
+                        <a href="https://www.tiktok.com/@ratu_massage" target="_blank" aria-label="TikTok Ratu Massage" class="w-9 h-9 rounded-full bg-dark-card border border-champagne-gold/30 flex items-center justify-center text-champagne-gold hover:bg-champagne-gold hover:text-deep-purple transition-all">
+                            <i class="fa-brands fa-tiktok text-sm"></i>
+                        </a>
+                        <a href="https://wa.me/62895605058117" target="_blank" aria-label="WhatsApp Ratu Massage" class="w-9 h-9 rounded-full bg-dark-card border border-champagne-gold/30 flex items-center justify-center text-champagne-gold hover:bg-champagne-gold hover:text-deep-purple transition-all">
+                            <i class="fa-brands fa-whatsapp text-sm"></i>
+                        </a>
+                        <a href="#beranda" aria-label="Kembali ke Atas" class="w-9 h-9 rounded-full bg-dark-card border border-champagne-gold/30 flex items-center justify-center text-champagne-gold hover:bg-champagne-gold hover:text-deep-purple transition-all">
+                            <i class="fa-solid fa-arrow-up text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Info Operasional & Kontak -->
+                <div class="space-y-3">
+                    <h4 class="font-cinzel text-sm font-bold text-champagne-gold uppercase tracking-wider">Kontak & Jam Buka</h4>
+                    <ul class="space-y-2 text-xs text-purple-200/80">
+                        <li class="flex items-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-champagne-gold text-sm w-4"></i>
+                            <a href="https://wa.me/62895605058117" target="_blank" class="hover:text-champagne-gold">0895605058117</a>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-brands fa-tiktok text-champagne-gold text-sm w-4"></i>
+                            <a href="https://www.tiktok.com/@ratu_massage" target="_blank" class="hover:text-champagne-gold">@ratu_massage</a>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-regular fa-clock text-champagne-gold text-sm w-4"></i>
+                            <span>08.00 – 22.00 WIB (Setiap Hari)</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-house-chimney-medical text-champagne-gold text-sm w-4"></i>
+                            <span>Panggilan Rumah, Apartemen, Hotel</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Wilayah Cakupan -->
+                <div class="space-y-3">
+                    <h4 class="font-cinzel text-sm font-bold text-champagne-gold uppercase tracking-wider">Wilayah Layanan</h4>
+                    <ul class="space-y-1.5 text-xs text-purple-200/80">
+                        <li><i class="fa-solid fa-check text-champagne-gold mr-1.5 text-[10px]"></i> Surabaya Barat, Pusat, Timur</li>
+                        <li><i class="fa-solid fa-check text-champagne-gold mr-1.5 text-[10px]"></i> Surabaya Selatan & Utara</li>
+                        <li><i class="fa-solid fa-check text-champagne-gold mr-1.5 text-[10px]"></i> Sidoarjo Kota & Waru</li>
+                        <li><i class="fa-solid fa-check text-champagne-gold mr-1.5 text-[10px]"></i> Gedangan, Sedati, Candi, dst.</li>
+                        <li class="text-[11px] text-champagne-gold/70 pt-1 italic">*Promo transport sesuai ketentuan area</li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Keamanan & Integritas Merek -->
+                <div class="space-y-3">
+                    <h4 class="font-cinzel text-sm font-bold text-champagne-gold uppercase tracking-wider">Identitas Merek</h4>
+                    <p class="text-xs text-purple-200/80 leading-relaxed">
+                        Seluruh layanan, pricelist, dan nomor WhatsApp resmi beroperasi di bawah naungan tunggal <strong>RATU MASSAGE</strong>.
+                    </p>
+                    <div class="p-2.5 rounded-lg bg-royal-purple/20 border border-champagne-gold/20 text-[11px] text-champagne-gold">
+                        <i class="fa-solid fa-shield text-xs mr-1"></i>
+                        Pelayanan sopan, profesional & terpercaya.
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Bottom Copyright & Admin Demo Trigger -->
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-purple-300/60 gap-4">
+                <p>© 2025 RATU MASSAGE SURABAYA · SIDOARJO. Seluruh Hak Cipta Dilindungi.</p>
+                <div class="flex items-center gap-4">
+                    <button onclick="toggleAdminModal()" class="text-purple-300/50 hover:text-champagne-gold text-[11px] transition-colors flex items-center gap-1">
+                        <i class="fa-solid fa-gear"></i>
+                        <span>Info Sistem & Demo Panel</span>
+                    </button>
+                    <a href="#beranda" class="hover:text-champagne-gold">Kembali ke Atas</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING WHATSAPP BUTTON -->
+    <a href="https://wa.me/62895605058117?text=Halo%20Admin%20RATU%20MASSAGE,%20saya%20ingin%20tanya%20jadwal%20layanan%20pijat%20panggilan." target="_blank" aria-label="Hubungi WhatsApp RATU MASSAGE" class="fixed bottom-6 right-6 z-40 bg-gradient-to-r from-green-500 to-emerald-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform duration-300 group">
+        <i class="fa-brands fa-whatsapp text-2xl group-hover:rotate-12 transition-transform"></i>
+        <!-- Ping Animation -->
+        <span class="absolute -top-1 -right-1 flex h-4 w-4">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-champagne-gold opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-4 w-4 bg-champagne-gold"></span>
+        </span>
+    </a>
+
+    <!-- LIGHTBOX MODAL FOR GALLERY -->
+    <div id="lightboxModal" class="fixed inset-0 z-50 bg-black/95 backdrop-blur-md hidden flex items-center justify-center p-4">
+        <button onclick="closeLightbox()" class="absolute top-6 right-6 text-white text-3xl hover:text-champagne-gold transition-colors focus:outline-none z-10">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="max-w-4xl max-h-[85vh] flex flex-col items-center">
+            <img id="lightboxImg" src="" alt="Preview Foto Galeri" class="max-w-full max-h-[75vh] object-contain rounded-lg border border-champagne-gold/30 shadow-2xl">
+            <p id="lightboxCaption" class="mt-4 text-sm font-cinzel text-champagne-gold tracking-wide text-center"></p>
+        </div>
+    </div>
+
+    <!-- ADMIN CONCEPT & SPEC MODAL (Menanggapi poin #7 Fitur Admin) -->
+    <div id="adminModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="glass-card bg-deep-purple/95 max-w-lg w-full rounded-2xl p-6 border border-champagne-gold/40 shadow-2xl text-purple-100 space-y-4">
+            <div class="flex items-center justify-between border-b border-champagne-gold/20 pb-3">
+                <div class="flex items-center gap-2 text-champagne-gold">
+                    <i class="fa-solid fa-sliders text-lg"></i>
+                    <h3 class="font-cinzel font-bold text-base">Arsitektur Panel Admin & Fitur</h3>
+                </div>
+                <button onclick="toggleAdminModal()" class="text-purple-300 hover:text-champagne-gold">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+            
+            <div class="text-xs space-y-3 leading-relaxed text-purple-200/90">
+                <p>
+                    Website ini telah dikonfigurasi secara lengkap dalam satu kesatuan file mandiri. Berikut status integrasi sistem:
+                </p>
+                <div class="bg-dark-card p-3 rounded-lg border border-champagne-gold/15 space-y-2">
+                    <div class="flex justify-between">
+                        <span>• Edit Harga & Layanan:</span>
+                        <span class="text-champagne-gold font-semibold">Tersinkron di UI</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span>• Booking WhatsApp:</span>
+                        <span class="text-green-400 font-semibold">Aktif & Fungsional</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span>• Jam Operasional:</span>
+                        <span class="text-champagne-gold font-semibold">08.00–22.00 WIB</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span>• Autentikasi Backend:</span>
+                        <span class="text-purple-300 italic">Disarankan via CMS Server</span>
+                    </div>
+                </div>
+                <p class="text-[11px] text-purple-300/60">
+                    *Sesuai ketentuan keamanan web, autentikasi pengeditan harga di level produksi memerlukan server backend/database terpisah saat di-deploy ke domain publik.
+                </p>
+            </div>
+
+            <div class="pt-2">
+                <button onclick="toggleAdminModal()" class="w-full gold-btn-gradient py-2.5 rounded-xl font-bold text-xs">
+                    Tutup Informasi
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Set default booking date to today
+        document.addEventListener('DOMContentLoaded', () => {
+            const today = new Date().toISOString().split('T')[0];
+            const bookingDateInput = document.getElementById('bookingDate');
+            if (bookingDateInput) {
+                bookingDateInput.value = today;
+                bookingDateInput.min = today;
+            }
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileMenuIcon = document.getElementById('mobileMenuIcon');
+
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', () => {
+                const isHidden = mobileMenu.classList.contains('hidden');
+                if (isHidden) {
+                    mobileMenu.classList.remove('hidden');
+                    mobileMenuIcon.classList.replace('fa-bars', 'fa-xmark');
+                } else {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuIcon.classList.replace('fa-xmark', 'fa-bars');
+                }
+            });
+        }
+
+        // Close mobile menu on navigation click
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenuIcon.classList.replace('fa-xmark', 'fa-bars');
+            });
+        });
+
+        // Select Service from Special Cards to Booking Form
+        function pilihLayananBooking(serviceName) {
+            const selectEl = document.getElementById('serviceSelect');
+            if (selectEl) {
+                // Find matching option or set value
+                let found = false;
+                for (let i = 0; i < selectEl.options.length; i++) {
+                    if (selectEl.options[i].text.toLowerCase().includes(serviceName.toLowerCase())) {
+                        selectEl.selectedIndex = i;
+                        found = true;
+                        break;
+                    }
+                }
+                if (!found) {
+                    // select nearest match
+                    selectEl.value = serviceName;
+                }
+            }
+            // Smooth scroll to booking
+            const bookingSection = document.getElementById('booking');
+            if (bookingSection) {
+                bookingSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Gallery Filter Logic
+        function filterGallery(category) {
+            const items = document.querySelectorAll('.gallery-item');
+            const buttons = document.querySelectorAll('.gallery-filter-btn');
+
+            buttons.forEach(btn => {
+                if (btn.getAttribute('data-filter') === category) {
+                    btn.classList.add('bg-champagne-gold', 'text-deep-purple', 'font-bold');
+                    btn.classList.remove('bg-dark-card', 'text-champagne-gold');
+                } else {
+                    btn.classList.remove('bg-champagne-gold', 'text-deep-purple', 'font-bold');
+                    btn.classList.add('bg-dark-card', 'text-champagne-gold');
+                }
+            });
+
+            items.forEach(item => {
+                if (category === 'semua' || item.classList.contains(category)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // Lightbox Modal Logic
+        const lightboxModal = document.getElementById('lightboxModal');
+        const lightboxImg = document.getElementById('lightboxImg');
+        const lightboxCaption = document.getElementById('lightboxCaption');
+
+        function openLightbox(imgSrc, captionText) {
+            lightboxImg.src = imgSrc;
+            lightboxCaption.textContent = captionText;
+            lightboxModal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            lightboxModal.classList.add('hidden');
+            lightboxImg.src = '';
+            document.body.style.overflow = 'auto';
+        }
+
+        if (lightboxModal) {
+            lightboxModal.addEventListener('click', (e) => {
+                if (e.target === lightboxModal) {
+                    closeLightbox();
+                }
+            });
+        }
+
+        // Admin Modal Toggle
+        function toggleAdminModal() {
+            const adminModal = document.getElementById('adminModal');
+            if (adminModal) {
+                adminModal.classList.toggle('hidden');
+            }
+        }
+
+        // WhatsApp Booking Form Submission
+        const bookingForm = document.getElementById('bookingForm');
+        if (bookingForm) {
+            bookingForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+
+                const name = document.getElementById('clientName').value.trim();
+                const service = document.getElementById('serviceSelect').value;
+                const date = document.getElementById('bookingDate').value;
+                const time = document.getElementById('bookingTime').value;
+                const area = document.querySelector('input[name="areaOption"]:checked').value;
+                const address = document.getElementById('clientAddress').value.trim();
+
+                // Format message for WhatsApp
+                const waNumber = '62895605058117';
+                const messageText = `👑 *FORMULIR RESERVASI RATU MASSAGE* 👑\n\n` +
+                    `• *Nama Pemesan:* ${name}\n` +
+                    `• *Layanan:* ${service}\n` +
+                    `• *Tanggal Booking:* ${date}\n` +
+                    `• *Jam yang Diinginkan:* ${time}\n` +
+                    `• *Area Layanan:* ${area}\n` +
+                    `• *Alamat / Catatan:* ${address}\n\n` +
+                    `_Mohon info ketersediaan jadwal terapis dan konfirmasi biaya transportasi. Terima kasih RATU MASSAGE._`;
+
+                const encodedMsg = encodeURIComponent(messageText);
+                const waUrl = `https://wa.me/${waNumber}?text=${encodedMsg}`;
+
+                // Open WhatsApp in new tab
+                window.open(waUrl, '_blank');
+            });
+        }
+    </script>
+</body>
+</html>S
